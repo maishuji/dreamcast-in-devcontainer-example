@@ -1,7 +1,7 @@
 {
 	"name": "Dreamcast Environment",
 	// Docker image
-	"image": "maishuji/dc-kos-image:13.2.0_07MAY24",
+	"image": "maishuji/dc-kos-image:14.1.1_11MAY24",
 	"customizations": {
 		"vscode": {
 			"extensions": [
