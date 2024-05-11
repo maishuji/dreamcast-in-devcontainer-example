@@ -18,6 +18,6 @@ jobs:
           source /opt/toolchains/dc/kos/environ.sh
           mkdir build
           cd build
-          cmake .. -DCMAKE_TOOLCHAIN_FILE=/opt/toolchains/dc/kos/utils/cmake/dreamcast.toolchain.cmake
+          cmake .. -DCMAKE_TOOLCHAIN_FILE=../toolchains/dreamcast.cmake
           make
         shell: bash
