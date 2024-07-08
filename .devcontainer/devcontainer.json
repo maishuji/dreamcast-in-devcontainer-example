@@ -1,19 +1,21 @@
 {
 	"name": "Dreamcast Environment",
 	// Docker image
-	"image": "maishuji/dc-kos-image:14.1.1_11MAY24",
+	"image": "maishuji/dc-kos-image:14.1.1_13JUL24",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"ms-vscode.cpptools-extension-pack",
 				"donjayamanne.githistory",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"github.vscode-github-actions",
+				"shd101wyy.markdown-preview-enhanced"
 			]
 		}
 	},
 	"mounts": [
-		"source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
-	]
+		"type=bind,source=${localEnv:HOME}/.ssh/,target=/non-root/.ssh/,readonly"
+	],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -28,5 +30,5 @@
 	// "customizations": {},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	"remoteUser": "non-root"
 }
