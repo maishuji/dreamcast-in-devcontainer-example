@@ -6,6 +6,8 @@ endif()
 
 project(dc-cmake-examples CXX)
 
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+include(NoInSourceBuilds)
 # ------------------------------------------ #
 # Global cmake variables
 # ------------------------------------------ #
