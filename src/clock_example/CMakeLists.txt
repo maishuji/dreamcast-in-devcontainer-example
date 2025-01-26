@@ -5,10 +5,10 @@ if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.24.0")
 endif()
 set(TARGET_NAME "clock-example")
 add_executable(${TARGET_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/clock.cpp)
-
 set_target_properties(${TARGET_NAME} PROPERTIES
                       CMAKE_CXX_STANDARD 20
                       CXX_EXTENSIONS OFF
+                      CXX_INCLUDE_WHAT_YOU_USE ${IWYU_PATH}
                       )
 
 target_link_libraries(${TARGET_NAME} PRIVATE GL dcplib)
