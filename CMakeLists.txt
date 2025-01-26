@@ -8,6 +8,8 @@ project(dc-cmake-examples CXX)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(NoInSourceBuilds)
+
+find_program(IWYU_PATH NAMES include-what-you-use iwyu)
 # ------------------------------------------ #
 # Global cmake variables
 # ------------------------------------------ #
